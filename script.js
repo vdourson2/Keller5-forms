@@ -9,3 +9,10 @@ firstname.addEventListener('keyup', (e) => {
 
 //Lorsque l'age est encodé dans le second input, si il est supérier ou égal à 18,
 //le contenu de la section "a-hard-truth" est révélé.
+let age = document.getElementById('age');
+let truth = document.getElementById('a-hard-truth');
+age.addEventListener('keyup', (e) => {
+    if (age.value >= 18){
+        truth.style.visibility = "visible";
+    }
+})
