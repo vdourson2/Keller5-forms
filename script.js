@@ -15,4 +15,28 @@ age.addEventListener('keyup', (e) => {
     if (age.value >= 18){
         truth.style.visibility = "visible";
     }
+});
+
+//Lorsqu'on encode un mot de passe dans le 3ème input, 
+//si il fait moins de 6 caractères: afficher la zone en rouge
+let pwd = document.getElementById('pwd');
+pwd.addEventListener('keyup', (e) => {
+    if (pwd.value.length<6){
+        pwd.style.backgroundColor = "red";
+    }
+    else {
+        pwd.style.backgroundColor = "white";
+    }
+})
+
+//Lorsqu'on encode à nouveau le mot de passe dans le 4ème input, 
+//si il ne correspond pas au précédent : afficher la zone en rouge
+let pwdConfirm = document.getElementById('pwd-confirm');
+pwdConfirm.addEventListener('keyup', (e) => {
+    if (pwd.value != pwdConfirm.value){
+        pwdConfirm.style.backgroundColor = "red";
+    }
+    else {
+        pwdConfirm.style.backgroundColor = "white";
+    }
 })
