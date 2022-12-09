@@ -40,3 +40,17 @@ pwdConfirm.addEventListener('keyup', (e) => {
         pwdConfirm.style.backgroundColor = "white";
     }
 })
+
+//Lorsque l'on change l'option dark ou light mode de la zone "select",
+// le fond change en conséquence
+let toggle = document.getElementById("toggle-darkmode");
+toggle.addEventListener('change', (e) => {
+    if (toggle.value == "dark") {
+        document.body.style.backgroundColor = "black" ; 
+        document.body.style.color = "white";            
+    }
+    else {
+        document.body.style.backgroundColor = "white" ;    
+        document.body.style.color = "black";      
+    }
+})
